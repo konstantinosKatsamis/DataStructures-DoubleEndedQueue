@@ -19,32 +19,47 @@ public class Main {
             System.out.println("7. Get the size of the Queue");
             System.out.println("8. Print Queue");
             System.out.println("9. Exit");
+            System.out.print("> ");
             answer = in.next();
 
             switch (answer){
                 case "1":
-                    System.out.println("\nSelection for add item at First");
-                    System.out.println("Give the item you want");
+                    System.out.println("\nSelection for add item at the Front of the Queue");
+                    System.out.print("Give the item you want: ");
                     answer = in.next();
                     deq.addFirst(Integer.valueOf(answer));
                     break;
 
                 case "2":
+                    System.out.println("\nSelection for Remove the First item of the Queue");
+                    System.out.println("Removed item: " + deq.removeFirst());
                     break;
 
                 case "3":
+                    System.out.println("\nSelection for add item at the End of the Queue");
+                    System.out.print("Give the item you want: ");
+                    answer = in.next();
+                    deq.addLast(Integer.valueOf(answer));
                     break;
 
                 case "4":
+                    System.out.println("\nSelection for Remove the Last item of the Queue");
+                    System.out.println("Removed item: " + deq.removeLast());
                     break;
 
                 case "5":
+                    System.out.println("\nSelection to get the First item of the Queue");
+                    System.out.println("Returned item: " + deq.getFirst());
                     break;
 
                 case "6":
+                    System.out.println("\nSelection to get the Last item of the Queue");
+                    System.out.println("Returned item: " + deq.getLast());
                     break;
 
                 case "7":
+                    System.out.println("\nSelection to get the Size of the Queue");
+                    System.out.println("Size of Queue: " + deq.size());
                     break;
 
                 case "8":
@@ -54,7 +69,7 @@ public class Main {
 
             }
         } while(!answer.equals("9"));
-        
+
     }
 
 }
