@@ -7,7 +7,7 @@ public class DoubleEndedQueue_Implementation<T> implements DoubleEndedQueue<T> {
     private Node last;
     private int N;
 
-    public DoubleEndedQueue_Implementation(){}
+    public DoubleEndedQueue_Implementation() {}
 
     public class Node{
         private T item;
@@ -131,4 +131,5 @@ public class DoubleEndedQueue_Implementation<T> implements DoubleEndedQueue<T> {
     public int size() {
         return N;
     }
+
 }
