@@ -24,26 +24,26 @@ public class Main {
 
             switch (answer){
                 case "1":
-                    System.out.println("\nSelection for add item at the Front of the Queue");
+                    System.out.println("\nSelection to add an item at the Front of the Queue");
                     System.out.print("Give the item you want: ");
                     answer = in.next();
                     deq.addFirst(Integer.valueOf(answer));
                     break;
 
                 case "2":
-                    System.out.println("\nSelection for Remove the First item of the Queue");
+                    System.out.println("\nSelection to Remove the First item of the Queue");
                     System.out.println("Removed item: " + deq.removeFirst());
                     break;
 
                 case "3":
-                    System.out.println("\nSelection for add item at the End of the Queue");
+                    System.out.println("\nSelection to add an item at the End of the Queue");
                     System.out.print("Give the item you want: ");
                     answer = in.next();
                     deq.addLast(Integer.valueOf(answer));
                     break;
 
                 case "4":
-                    System.out.println("\nSelection for Remove the Last item of the Queue");
+                    System.out.println("\nSelection to Remove the Last item of the Queue");
                     System.out.println("Removed item: " + deq.removeLast());
                     break;
 
