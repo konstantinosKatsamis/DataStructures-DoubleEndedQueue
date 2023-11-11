@@ -1,4 +1,5 @@
 from DoubleEndedQueue import *
+from selenium.common.exceptions import NoSuchElementException
 
 class Node(Generic[T]):
     def __init__(self, data: T):
@@ -13,7 +14,7 @@ class DoubleEndedQueue_Implementation(Generic[T]):
         self.last = None
     
     def isEmpty(self) -> bool:
-        return self.size == 0
+        return self.first == None
     
     def addFirst(self, item: T) -> None:
         n = Node(item)
@@ -29,7 +30,7 @@ class DoubleEndedQueue_Implementation(Generic[T]):
     
     def removeFirst(self) -> T:
         if self.isEmpty():
-            return None
+            raise NoSuchElementException("Method: 'removeFirst' - The Queue is Empty")
         returned_T = self.getFirst()
         if (self.first == self.last):
             self.first = None
@@ -55,7 +56,7 @@ class DoubleEndedQueue_Implementation(Generic[T]):
     
     def removeLast(self) -> T:
         if self.isEmpty():
-            return None
+            raise NoSuchElementException("Method: 'removeLast' - The Queue is Empty")
         returned = self.getLast()
         if (self.last == self.first):
             self.last = None
@@ -69,15 +70,17 @@ class DoubleEndedQueue_Implementation(Generic[T]):
     
     def getFirst(self) -> T:
         if self.isEmpty():
-            return None
+            raise NoSuchElementException("Method: 'getFist' - The Queue is Empty")
         else:
             return self.first.data
     
     def getLast(self) -> T:
         if self.isEmpty():
-            return None
+            raise NoSuchElementException("Method: 'getLast' - The Queue is Empty")
         else:
             return self.last.data
+        
+    
     
     def printQueue(self) -> None:
         if self.isEmpty():
