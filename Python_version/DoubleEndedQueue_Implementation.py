@@ -14,7 +14,7 @@ class DoubleEndedQueue_Implementation(Generic[T]):
         self.last = None
     
     def isEmpty(self) -> bool:
-        return self.first == None
+        return self.first is None
     
     def addFirst(self, item: T) -> None:
         n = Node(item)
@@ -26,7 +26,7 @@ class DoubleEndedQueue_Implementation(Generic[T]):
             self.first.previous = n
             self.first = n        
 
-        self.size = self.size + 1
+        self.size += 1
     
     def removeFirst(self) -> T:
         if self.isEmpty():
@@ -52,7 +52,7 @@ class DoubleEndedQueue_Implementation(Generic[T]):
             self.last.next = n
             self.last = n
         
-        self.size = self.size + 1
+        self.size += 1
     
     def removeLast(self) -> T:
         if self.isEmpty():
@@ -65,7 +65,7 @@ class DoubleEndedQueue_Implementation(Generic[T]):
             self.last = self.last.previous
             self.last.next = None
         
-        self.size = self.size - 1
+        self.size -= 1
         return returned
     
     def getFirst(self) -> T:
@@ -92,7 +92,7 @@ class DoubleEndedQueue_Implementation(Generic[T]):
                 print(i, ". ", sep="", end="")
                 print(n.data)
                 n = n.next
-                i = i + 1
+                i += 1
     
     def getSize(self) -> int:
         return self.size
