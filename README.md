@@ -9,11 +9,11 @@ In this repository the DEQ is implemented in Java and Python. In every version t
 
 1. Add First                         --> Add an element at the front of the queue
 
-2. Remove First                      --> Delete and return the item at the front of the queue
+2. Remove First                      --> Delete and return the element at the front of the queue
 
 3. Add Last                          --> Add an element at the end of the queue
 
-4. Remove Last                       --> Delete and return the item at the end of the queue
+4. Remove Last                       --> Delete and return the element at the end of the queue
 
 5. Get First                         --> Get the first element of the queue
 
